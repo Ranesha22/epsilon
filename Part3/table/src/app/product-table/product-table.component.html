@@ -1,0 +1,36 @@
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <label>Product Name</label>
+                    <div class="icon-container">
+                        <mat-icon aria-hidden="false" class="material-symbols-outlined" (click)="sortName(1)">arrow_drop_up</mat-icon>
+                        <mat-icon class="material-icons-outlined"  (click)="sortName(0)">arrow_drop_down</mat-icon>
+                    </div>
+                </th>
+                <th>
+                    <label>Price</label>
+                    <div class="icon-container">
+                        <mat-icon aria-hidden="false" class="material-symbols-outlined" (click)="sortPrice(1)">arrow_drop_up</mat-icon>
+                        <mat-icon class="material-icons-outlined"  (click)="sortPrice(0)">arrow_drop_down</mat-icon>
+                    </div>
+                </th>
+                <th>
+                    <label>Category</label>
+                    <div class="icon-container">
+                        <mat-icon aria-hidden="false" class="material-symbols-outlined" (click)="sortCategory(1)">arrow_drop_up</mat-icon>
+                        <mat-icon class="material-icons-outlined"  (click)="sortCategory(0)">arrow_drop_down</mat-icon>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of cookies">
+                <td><label>{{item.name}}</label></td>
+                <td><label>{{item.price}}</label></td>
+                <td><label>{{item.category}}</label></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
